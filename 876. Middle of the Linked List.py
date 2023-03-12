@@ -1,7 +1,7 @@
 ###Python
 
 
-## 
+## 将链表里的数据提出来放到list中，然后直接提取。Take the data out of the linked list and put it to the list.
 class Solution:
     def middleNode(self, head: ListNode) -> ListNode:
         A = [head]
