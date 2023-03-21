@@ -31,14 +31,14 @@ class Solution:
         res = []
         cur = ""#做子串
         for i in range(n):
-            if s[i] not in cur:
-                cur += s[i]
-                count = len(cur)
-                res.append(count)
-            else:
-                while s[i] in cur:
-                    cur = cur[1:i]
-                cur += s[i]
-                res.append(len(cur))
+            if s[i] not in cur:#如果s[i]不在cur子串里
+                cur += s[i]cur加这个子串
+                count = len(cur)然后取这个子串的长度
+                res.append(count)放到res里
+            else:#如果s[i]在的话
+                while s[i] in cur#遍历cur，找到s[i]
+                    cur = cur[1:i]#那么此时最长的子串就在cur内部找
+                cur += s[i]#然后末尾加上s[i]
+                res.append(len(cur))#取长度
         
-        return max(res)
+        return max(res)#返回最长的
